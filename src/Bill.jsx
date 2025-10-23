@@ -32,8 +32,7 @@ function Bill() {
               setPublicAddress(JSON.parse(wasm_generate_stealth_address(stealthAddress)))
             }}>
               Generate 
-              {publicAddress.address && " a new "}
-              Address
+              {publicAddress.address ? " a new Address" : " an Address"}
             </button><p />
             {
               publicAddress.address && (
