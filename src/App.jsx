@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import init from './rust-wasm/pkg/rust_wasm.js'
-import Alice from './Alice.tsx'
-import Bill from './Bill.tsx'
+import Alice from './Alice.jsx'
+import Bill from './Bill.jsx'
 
 function App() {
   const [wasmReady, setWasmReady] = useState(false)
