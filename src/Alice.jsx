@@ -43,7 +43,7 @@ function Alice() {
             overflow: "auto",
             whiteSpace: "nowrap",
           }}>
-            <b>Stealth address
+            <b>Stealth meta address
               <i> (K<sub>pub</sub>,V<sub>pub</sub>)</i>
             :</b> {metaKey.address}
             <br />
