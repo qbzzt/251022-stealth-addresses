@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { wasm_generate_stealth_address } from './rust-wasm/pkg/rust_wasm.js'
 
 function Bill() {
-  const [stealthAddress, setStealthAddress] = useState("")
+  const [stealthMetaAddress, setStealthMetaAddress] = useState("")
   const [publicAddress, setPublicAddress] = useState({})
 
   const getVariableHtml = (varName, subscript) =>
@@ -18,18 +18,18 @@ function Bill() {
         whiteSpace: "nowrap",        
       }} >
         <h2>Bill User Interface</h2>
-        Alice's stealth meta address 
+        Alice's stealth meta-address 
         <i> (K<sub>pub</sub>,V<sub>pub</sub>)</i>:
-        <input type="text" value={stealthAddress}
-          onChange={(e) => setStealthAddress(e.target.value)}
+        <input type="text" value={stealthMetaAddress}
+          onChange={(e) => setStealthMetaAddress(e.target.value)}
           size="40"
         /> <br /> 
         <br />
-        { stealthAddress.length == 132 && (
+        { stealthMetaAddress.length == 132 && (
           <div>
 
             <button onClick={() => {
-              setPublicAddress(JSON.parse(wasm_generate_stealth_address(stealthAddress)))
+              setPublicAddress(JSON.parse(wasm_generate_stealth_address(stealthMetaAddress)))
             }}>
               Generate 
               {publicAddress.address ? " a new Address" : " an Address"}

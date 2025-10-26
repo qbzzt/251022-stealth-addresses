@@ -35,7 +35,7 @@ function Alice() {
           setAddress("")
           setBillPubKey("")
         }}>
-          Generate a {metaKey && "new"} Stealth Meta Address
+          Generate a {metaKey && "new"} Stealth Meta-address
         </button><p />
         { metaKey &&
         (
@@ -43,7 +43,7 @@ function Alice() {
             overflow: "auto",
             whiteSpace: "nowrap",
           }}>
-            <b>Stealth meta address
+            <b>Stealth meta-address
               <i> (K<sub>pub</sub>,V<sub>pub</sub>)</i>
             :</b> {metaKey.address}
             <br />
